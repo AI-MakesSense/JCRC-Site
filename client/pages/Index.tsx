@@ -50,10 +50,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-deep-blue rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">◊</span>
-              </div>
-              <span className="text-lg font-bold text-charcoal">JCRC-NM</span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3d5e2ba8862b4465bd0b5a83510d9d6f?format=webp&width=400"
+                alt="JCRC-NM Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <a href="#home" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">HOME</a>

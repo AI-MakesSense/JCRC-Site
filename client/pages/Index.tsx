@@ -3,6 +3,45 @@ import { useState, useEffect } from "react";
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroImages = [
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F4d2e78009f47401eba80a2259c18e41b?format=webp&width=1200",
+      alt: "Juan speaking at event"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3b2dcab2c6c24d93a3749778ff83d9a9?format=webp&width=1200",
+      alt: "77th Birthday Israel celebration"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F19a16833a3494411af8c34af9c18878b?format=webp&width=1200",
+      alt: "Community gathering"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F7e3e34f82a7941178d2093d467d54c16?format=webp&width=1200",
+      alt: "Community event"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  };
 
   return (
     <div className="min-h-screen bg-white">

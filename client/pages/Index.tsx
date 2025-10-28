@@ -358,12 +358,11 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-warm-gold rounded flex items-center justify-center">
-                  <span className="text-charcoal font-bold">◊</span>
-                </div>
-                <span className="font-bold text-lg">JCRC-NM</span>
-              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3d5e2ba8862b4465bd0b5a83510d9d6f?format=webp&width=300"
+                alt="JCRC-NM Logo"
+                className="h-10 w-auto mb-4"
+              />
               <p className="text-sm text-slate-400">
                 A program of the JCC of Greater Albuquerque
               </p>

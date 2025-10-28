@@ -1,5 +1,5 @@
-import { Mail, Menu, X, Building2, BookOpen, Newspaper } from "lucide-react";
-import { useState } from "react";
+import { Mail, Menu, X, Building2, BookOpen, Newspaper, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

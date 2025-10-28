@@ -1,5 +1,6 @@
 import { Mail, Menu, X, Building2, BookOpen, Newspaper, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { NewsletterCTA } from "../components/NewsletterCTA";
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

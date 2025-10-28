@@ -1,4 +1,4 @@
-import { Mail, Menu, X } from "lucide-react";
+import { Mail, Menu, X, Building2, BookOpen, Newspaper } from "lucide-react";
 import { useState } from "react";
 
 export default function Index() {

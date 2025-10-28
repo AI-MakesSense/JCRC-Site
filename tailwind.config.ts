@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "deep-blue": "#23549B",
+        "warm-gold": "#F0BF37",
+        "olive-green": "#549748",
+        "slate-blue": "#4A6F9B",
+        "coral-orange": "#FF8A44",
+        "rose-magenta": "#D34E7A",
+        charcoal: "#2B2B2B",
       },
       borderRadius: {
         lg: "var(--radius)",

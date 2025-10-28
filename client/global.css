@@ -109,14 +109,19 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Inter", sans-serif;
+    font-family: "Open Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+  :where(p, span, li, a, button, label, td, th) {
     overflow-wrap: anywhere;
     word-break: break-word;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    @apply font-bold;
   }
 
   pre,
@@ -125,15 +130,11 @@
     white-space: pre;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
-  }
-
   a {
     @apply transition-colors;
   }
 
   button {
-    @apply font-medium;
+    @apply font-semibold;
   }
 }

@@ -84,37 +84,24 @@ export default function Index() {
             {[
               {
                 title: "ENGAGE",
-                description: "Connect and unite the Jewish community",
-                icon: "👥",
-                color: "deep-blue"
+                description: "Connect and unite the Jewish community"
               },
               {
                 title: "EDUCATE",
-                description: "Promote knowledge about Jewish culture and values",
-                icon: "📖",
-                color: "warm-gold"
+                description: "Promote knowledge about Jewish culture and values"
               },
               {
                 title: "COLLABORATE",
-                description: "Build bridges with broader community",
-                icon: "🤝",
-                color: "olive-green"
+                description: "Build bridges with broader community"
               },
               {
                 title: "ADVOCATE",
-                description: "Represent Jewish interests across NM",
-                icon: "📣",
-                color: "coral-orange"
+                description: "Represent Jewish interests across NM"
               }
             ].map((pillar, index) => (
               <div key={index} className="text-center">
-                <div className={`w-20 h-20 mx-auto mb-4 flex items-center justify-center text-4xl rounded-full ${
-                  pillar.color === "deep-blue" ? "bg-deep-blue text-white" :
-                  pillar.color === "warm-gold" ? "bg-warm-gold text-charcoal" :
-                  pillar.color === "olive-green" ? "bg-olive-green text-white" :
-                  "bg-coral-orange text-white"
-                }`}>
-                  {pillar.icon}
+                <div className="w-full h-48 mx-auto mb-4 bg-slate-200 rounded-lg flex items-center justify-center border-2 border-slate-300">
+                  <span className="text-slate-500 font-semibold text-sm">Image Placeholder</span>
                 </div>
                 <h3 className="text-xl font-bold text-charcoal mb-2">{pillar.title}</h3>
                 <p className="text-charcoal text-sm">{pillar.description}</p>
@@ -137,28 +124,21 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                date: "NOV 15",
-                title: "Community Shabbat Dinner",
-                description: "Join us for a warm community gathering celebrating Shabbat with dinner and song"
+                title: "Community Shabbat Dinner"
               },
               {
-                date: "DEC 2",
-                title: "Interfaith Dialogue Series",
-                description: "Building bridges through conversation with faith leaders across New Mexico"
+                title: "Interfaith Dialogue Series"
               },
               {
-                date: "DEC 10",
-                title: "Hanukkah Family Festival",
-                description: "Celebrate for Festival of Lights with activities, crafts, and traditional foods"
+                title: "Hanukkah Family Festival"
               }
             ].map((event, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                <div className="bg-gradient-to-r from-deep-blue to-slate-blue h-32 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">{event.date}</span>
+                <div className="w-full h-48 bg-slate-200 flex items-center justify-center border-b-2 border-slate-300">
+                  <span className="text-slate-500 font-semibold text-sm">Image Placeholder</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-charcoal mb-2">{event.title}</h3>
-                  <p className="text-charcoal text-sm mb-4">{event.description}</p>
+                  <h3 className="text-lg font-bold text-charcoal mb-4">{event.title}</h3>
                   <button className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm">
                     Register →
                   </button>

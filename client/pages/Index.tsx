@@ -113,7 +113,7 @@ export default function Index() {
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center justify-center text-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg tracking-wide">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-relaxed drop-shadow-lg">
                 Building a Vibrant, Secure Jewish Community in New Mexico
               </h1>
               <p className="text-lg sm:text-xl mb-8 text-blue-100 max-w-2xl mx-auto drop-shadow-md">

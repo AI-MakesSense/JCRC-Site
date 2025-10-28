@@ -89,22 +89,77 @@ export default function Index() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section id="home" className="bg-gradient-to-br from-deep-blue to-slate-blue text-white py-20 sm:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Building a Vibrant, Secure Jewish Community in New Mexico
-          </h1>
-          <p className="text-lg sm:text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Connecting, educating, and advocating for Jewish voices across the Land of Enchantment
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-warm-gold text-charcoal rounded-md hover:opacity-90 transition font-bold text-base">
-              Get Involved Today
-            </button>
-            <button className="px-8 py-3 border-2 border-white text-white rounded-md hover:bg-white hover:text-deep-blue transition font-semibold text-base">
-              Learn More
-            </button>
+      {/* Hero Section - Image Slider */}
+      <section id="home" className="relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden">
+        {/* Image Container */}
+        <div className="relative w-full h-full">
+          {heroImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+              style={{
+                backgroundImage: `url(${image.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            />
+          ))}
+
+          {/* Dark Overlay for Text Readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-50" />
+
+          {/* Content Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center text-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                Building a Vibrant, Secure Jewish Community in New Mexico
+              </h1>
+              <p className="text-lg sm:text-xl mb-8 text-blue-100 max-w-2xl mx-auto drop-shadow-md">
+                Connecting, educating, and advocating for Jewish voices across the Land of Enchantment
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-3 bg-warm-gold text-charcoal rounded-md hover:opacity-90 transition font-bold text-base shadow-lg">
+                  Get Involved Today
+                </button>
+                <button className="px-8 py-3 border-2 border-white text-white rounded-md hover:bg-white hover:text-deep-blue transition font-semibold text-base shadow-lg">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={goToPrev}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 transition"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 transition"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Dot Indicators */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition ${
+                  index === currentSlide
+                    ? "bg-warm-gold"
+                    : "bg-white bg-opacity-50 hover:bg-opacity-75"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>

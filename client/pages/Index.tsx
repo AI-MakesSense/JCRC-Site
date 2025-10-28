@@ -57,15 +57,16 @@ export default function Index() {
                 className="h-12 w-auto"
               />
             </div>
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-6">
               <a href="#home" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">HOME</a>
               <a href="#about" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">ABOUT US</a>
               <a href="#programs" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">PROGRAMS</a>
               <a href="#events" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">EVENTS</a>
               <a href="#resources" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">RESOURCES</a>
               <a href="#news" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">NEWS</a>
-              <button className="px-4 py-2 bg-deep-blue text-white rounded-md hover:opacity-90 transition font-semibold text-sm">
-                GET INVOLVED
+              <a href="#involved" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">GET INVOLVED</a>
+              <button className="px-6 py-2 bg-warm-gold text-charcoal rounded-md hover:opacity-90 transition font-bold text-sm">
+                DONATE
               </button>
             </nav>
             <button

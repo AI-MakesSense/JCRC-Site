@@ -165,31 +165,36 @@ export default function Index() {
                 title: "Member Organizations",
                 count: "25+",
                 description: "Organizations",
-                icon: "🏢"
+                icon: Building2
               },
               {
                 title: "Educational Resources",
                 count: "100+",
                 description: "Learn & Grow",
-                icon: "📚"
+                icon: BookOpen
               },
               {
                 title: "Media & News",
                 count: "Daily",
                 description: "Updates",
-                icon: "📰"
+                icon: Newspaper
               }
-            ].map((resource, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl mb-4">{resource.icon}</div>
-                <h3 className="text-xl font-bold text-charcoal mb-1">{resource.title}</h3>
-                <p className="text-3xl font-bold text-warm-gold mb-2">{resource.count}</p>
-                <p className="text-charcoal text-sm mb-4">{resource.description}</p>
-                <button className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm">
-                  Explore →
-                </button>
-              </div>
-            ))}
+            ].map((resource, index) => {
+              const IconComponent = resource.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-deep-blue to-slate-blue rounded-lg flex items-center justify-center">
+                    <IconComponent size={32} className="text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-charcoal mb-1">{resource.title}</h3>
+                  <p className="text-3xl font-bold text-warm-gold mb-2">{resource.count}</p>
+                  <p className="text-charcoal text-sm mb-4">{resource.description}</p>
+                  <button className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm">
+                    Explore →
+                  </button>
+                </div>
+              );
+            })}
           </div>
 
           <div className="mt-12 text-center">

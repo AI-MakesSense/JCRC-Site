@@ -27,7 +27,7 @@ export default function Index() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 

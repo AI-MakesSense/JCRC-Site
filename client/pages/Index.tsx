@@ -677,16 +677,16 @@ export default function Index() {
                   index === 0 ? "" : index === 1 ? "animate-delay-100" : "animate-delay-200"
                 }`}
               >
-                <div className="flex items-center justify-center mb-4">
+                <div className="flex items-center justify-center mb-4" aria-label="5 out of 5 stars">
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-warm-gold text-lg">
+                    <span key={i} className="text-warm-gold text-lg" aria-hidden="true">
                       ★
                     </span>
                   ))}
                 </div>
-                <p className="text-charcoal mb-6 leading-relaxed italic">
+                <blockquote className="text-charcoal mb-6 leading-relaxed italic">
                   "{testimonial.quote}"
-                </p>
+                </blockquote>
                 <div className="border-t border-slate-200 pt-4">
                   <p className="font-bold text-charcoal">
                     {testimonial.author}

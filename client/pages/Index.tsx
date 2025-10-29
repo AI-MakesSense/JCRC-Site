@@ -510,9 +510,20 @@ export default function Index() {
                   <p className="text-white/90 text-xs mb-4 leading-relaxed line-clamp-3">
                     {article.description}
                   </p>
-                  <button className="px-5 py-2 text-sm bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300 whitespace-nowrap">
-                    Read More →
-                  </button>
+                  {article.link ? (
+                    <a
+                      href={article.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 text-sm bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300 whitespace-nowrap inline-block"
+                    >
+                      Read More →
+                    </a>
+                  ) : (
+                    <button className="px-5 py-2 text-sm bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300 whitespace-nowrap">
+                      Read More →
+                    </button>
+                  )}
                 </div>
               </div>
             ))}

@@ -202,9 +202,7 @@ export default function Index() {
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center justify-center text-white">
             <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center py-8 sm:py-0">
-              <h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 drop-shadow-lg leading-tight sm:leading-snug md:leading-snug lg:leading-snug"
-              >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 drop-shadow-lg leading-tight sm:leading-snug md:leading-snug lg:leading-snug">
                 Building a Vibrant, Secure Jewish Community in New Mexico
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 text-blue-100 max-w-2xl mx-auto drop-shadow-md leading-relaxed">

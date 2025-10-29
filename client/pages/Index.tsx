@@ -183,7 +183,7 @@ export default function Index() {
               {
                 title: "ENGAGE",
                 description: "Connect and unite the Jewish community",
-                image: null
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fe4497284033e4f1485999adddae9fe0f?format=webp&width=600"
               },
               {
                 title: "EDUCATE",

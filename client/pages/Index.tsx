@@ -473,7 +473,7 @@ export default function Index() {
             community
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title:
@@ -508,7 +508,7 @@ export default function Index() {
             ].map((article, index) => (
               <div
                 key={index}
-                className={`relative h-72 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
+                className={`relative h-96 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
                   index === 0
                     ? ""
                     : index === 1

@@ -271,7 +271,7 @@ export default function Index() {
             pillars of service
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {[
               {
                 title: "ENGAGE",
@@ -320,9 +320,9 @@ export default function Index() {
                     className="h-3 w-full transition-all duration-300 group-hover:h-4"
                     style={{ backgroundColor: pillar.accentColor }}
                   ></div>
-                  <div className="p-6">
+                  <div className="p-8">
                     <div
-                      className="w-full h-40 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border-2 transition-all duration-300"
+                      className="w-full h-60 mx-auto mb-6 bg-slate-200 rounded-lg overflow-hidden border-2 transition-all duration-300"
                       style={{ borderColor: `${pillar.accentColor}40` }}
                     >
                       {pillar.image ? (
@@ -340,7 +340,7 @@ export default function Index() {
                       )}
                     </div>
                     <h3
-                      className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-white py-1 px-3 rounded-md"
+                      className="text-2xl font-bold mb-3 transition-colors duration-300 group-hover:text-white py-2 px-3 rounded-md"
                       style={{ color: pillar.accentColor }}
                       onMouseEnter={(e) =>
                         (e.currentTarget.style.backgroundColor = `${pillar.accentColor}15`)
@@ -351,7 +351,7 @@ export default function Index() {
                     >
                       {pillar.title}
                     </h3>
-                    <p className="text-charcoal text-sm">
+                    <p className="text-charcoal text-base">
                       {pillar.description}
                     </p>
                   </div>

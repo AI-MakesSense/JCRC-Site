@@ -2,26 +2,31 @@ import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 export function ScrollIndicator() {
-  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!containerRef.current) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Show the indicator when the section is in view
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.5, // Trigger when 50% of the section is visible
-      }
-    );
+    const handleScroll = () => {
+      if (!containerRef.current) return;
 
-    observer.observe(ref.current);
+      const rect = containerRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      // Show the indicator if the section is in view (top of element is above viewport or in viewport)
+      // and not scrolled past (bottom of element is still visible)
+      const isInView =
+        rect.top < viewportHeight && rect.bottom > 0;
+
+      setIsVisible(isInView);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call once on mount to set initial state
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -29,7 +34,7 @@ export function ScrollIndicator() {
 
   return (
     <div
-      ref={ref}
+      ref={containerRef}
       className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
     >
       <div className="flex flex-col items-center gap-2 animate-bounce">

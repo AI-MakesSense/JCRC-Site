@@ -604,24 +604,26 @@ export default function Index() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="relative py-20 sm:py-32 bg-slate-50">
+      <section className="relative py-20 sm:py-32 bg-gradient-to-r from-deep-blue to-slate-blue">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-deep-blue mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fade-in-up">
             Stay Connected
           </h2>
-          <p className="text-charcoal mb-8 text-lg">
+          <p className="text-white/90 mb-8 text-lg animate-fade-in-up animate-delay-100">
             Get monthly updates on events, programs, and Jewish community news
           </p>
 
-          <form className="flex flex-col sm:flex-row gap-3">
+          <form className="flex flex-col sm:flex-row gap-3 animate-fade-in-up animate-delay-200">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-deep-blue text-charcoal placeholder-slate-500"
+              aria-label="Email address for newsletter subscription"
+              className="flex-1 px-4 py-3 border-2 border-white bg-white rounded-md focus:outline-none focus:ring-2 focus:ring-warm-gold text-charcoal placeholder-slate-500"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-deep-blue text-white rounded-md hover:opacity-90 transition font-bold flex items-center justify-center gap-2"
+              aria-label="Subscribe to newsletter"
+              className="px-8 py-3 bg-warm-gold text-deep-blue rounded-md hover:bg-warm-gold/90 transition font-bold flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <Mail size={18} /> Subscribe
             </button>

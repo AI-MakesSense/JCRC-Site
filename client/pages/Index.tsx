@@ -198,7 +198,7 @@ export default function Index() {
               {
                 title: "ADVOCATE",
                 description: "Represent Jewish interests across NM",
-                image: null
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F436bc5f83f654da8b3c5d4eaae6805d8?format=webp&width=600"
               }
             ].map((pillar, index) => (
               <div key={index} className="text-center">

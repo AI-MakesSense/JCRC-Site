@@ -306,29 +306,17 @@ export default function Index() {
                 accentColor: "#D34E7A",
               },
             ].map((pillar, index) => {
-              const IconComponent = pillar.icon;
               return (
                 <div
                   key={index}
-                  className="text-center bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+                  className="text-center rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-105 group bg-gradient-to-br from-white to-slate-50 border border-slate-100"
                 >
                   <div
-                    className="h-2 w-full transition-all duration-300"
+                    className="h-3 w-full transition-all duration-300 group-hover:h-4"
                     style={{ backgroundColor: pillar.accentColor }}
                   ></div>
                   <div className="p-6">
-                    <div className="flex justify-center mb-4">
-                      <div
-                        className="p-3 rounded-full group-hover:scale-110 transition-transform duration-300"
-                        style={{ backgroundColor: `${pillar.accentColor}15` }}
-                      >
-                        <IconComponent
-                          size={32}
-                          style={{ color: pillar.accentColor }}
-                        />
-                      </div>
-                    </div>
-                    <div className="w-full h-40 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border border-slate-300">
+                    <div className="w-full h-40 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border-2 transition-all duration-300" style={{ borderColor: `${pillar.accentColor}40` }}>
                       {pillar.image ? (
                         <img
                           src={pillar.image}
@@ -343,7 +331,12 @@ export default function Index() {
                         </div>
                       )}
                     </div>
-                    <h3 className="text-lg font-bold text-charcoal mb-2 transition-colors duration-300 group-hover:text-warm-gold">
+                    <h3
+                      className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-white py-1 px-3 rounded-md"
+                      style={{ color: pillar.accentColor }}
+                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${pillar.accentColor}15`)}
+                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+                    >
                       {pillar.title}
                     </h3>
                     <p className="text-charcoal text-sm">{pillar.description}</p>

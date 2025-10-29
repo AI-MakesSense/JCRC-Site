@@ -609,6 +609,8 @@ export default function Index() {
               View All Community Partners →
             </a>
           </div>
+
+          <ScrollIndicator />
         </div>
       </section>
 

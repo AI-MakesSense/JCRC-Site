@@ -485,7 +485,9 @@ export default function Index() {
             ].map((article, index) => (
               <div
                 key={index}
-                className="relative h-72 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
+                className={`relative h-72 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
+                  index === 0 ? "" : index === 1 ? "animate-delay-100" : "animate-delay-200"
+                }`}
               >
                 {article.image ? (
                   <img

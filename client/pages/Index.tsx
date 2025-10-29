@@ -624,6 +624,65 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="relative py-20 sm:py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-deep-blue mb-4">
+            What Our Community Says
+          </h2>
+          <p className="text-center text-charcoal mb-16 max-w-2xl mx-auto text-lg">
+            Hear from community members and partners about the impact of our work
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote:
+                  "JCRC-NM has been instrumental in strengthening our community and creating meaningful dialogue across different backgrounds.",
+                author: "Sarah Cohen",
+                role: "Community Leader",
+              },
+              {
+                quote:
+                  "Their advocacy work has made a real difference in ensuring our voice is heard in important conversations affecting our community.",
+                author: "Rabbi David Martinez",
+                role: "Temple Director",
+              },
+              {
+                quote:
+                  "The educational programs have been transformative for our youth, connecting them to their heritage and to each other.",
+                author: "Jennifer Levy",
+                role: "Educator & Parent",
+              },
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-warm-gold"
+              >
+                <div className="flex items-center justify-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-warm-gold text-lg">
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className="text-charcoal mb-6 leading-relaxed italic">
+                  "{testimonial.quote}"
+                </p>
+                <div className="border-t border-slate-200 pt-4">
+                  <p className="font-bold text-charcoal">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-slate-600 text-sm">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <ScrollIndicator />
+        </div>
+      </section>
+
       {/* Supporters Section */}
       <section className="relative py-20 sm:py-32 bg-gradient-to-b from-white via-blue-50 to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

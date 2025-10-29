@@ -525,6 +525,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="h-1 bg-gradient-to-r from-transparent via-warm-gold to-transparent"></div>
+
       {/* Resources Section */}
       <section id="resources" className="relative py-20 sm:py-32 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

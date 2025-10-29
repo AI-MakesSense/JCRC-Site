@@ -455,11 +455,13 @@ export default function Index() {
               Visit Resource Hub
             </button>
           </div>
+
+          <ScrollIndicator />
         </div>
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 sm:py-32 bg-slate-50">
+      <section className="relative py-20 sm:py-32 bg-slate-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-deep-blue mb-4">
             Stay Connected

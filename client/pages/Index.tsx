@@ -457,7 +457,7 @@ export default function Index() {
 
           <div className="text-center mt-12">
             <a href="#supporters" className="text-deep-blue hover:text-warm-gold transition font-semibold">
-              View All Supporters →
+              View All Community Partners →
             </a>
           </div>
         </div>

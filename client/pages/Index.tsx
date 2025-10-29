@@ -178,7 +178,7 @@ export default function Index() {
       {/* Hero Section - Image Slider */}
       <section
         id="home"
-        className="relative h-96 sm:h-[500px] lg:h-[600px] overflow-hidden"
+        className="relative h-[420px] sm:h-[500px] md:h-[580px] lg:h-[650px] overflow-hidden"
       >
         {/* Image Container */}
         <div className="relative w-full h-full">
@@ -201,22 +201,21 @@ export default function Index() {
 
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center justify-center text-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8 text-center py-8 sm:py-0">
               <h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg"
-                style={{ lineHeight: "65px" }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 drop-shadow-lg leading-tight sm:leading-snug md:leading-snug lg:leading-snug"
               >
                 Building a Vibrant, Secure Jewish Community in New Mexico
               </h1>
-              <p className="text-lg sm:text-xl mb-8 text-blue-100 max-w-2xl mx-auto drop-shadow-md">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 text-blue-100 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
                 Connecting, educating, and advocating for Jewish voices across
                 the Land of Enchantment
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-warm-gold text-charcoal rounded-md hover:opacity-90 transition font-bold text-base shadow-lg">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 sm:px-0">
+                <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-warm-gold text-charcoal rounded-md hover:opacity-90 transition font-bold text-sm sm:text-base shadow-lg whitespace-nowrap">
                   Get Involved Today
                 </button>
-                <button className="px-8 py-3 border-2 border-white text-white rounded-md hover:bg-white hover:text-deep-blue transition font-semibold text-base shadow-lg">
+                <button className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-white text-white rounded-md hover:bg-white hover:text-deep-blue transition font-semibold text-sm sm:text-base shadow-lg whitespace-nowrap">
                   Learn More
                 </button>
               </div>
@@ -226,26 +225,26 @@ export default function Index() {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 transition"
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-2 sm:p-3 transition active:bg-opacity-70"
             aria-label="Previous slide"
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 transition"
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-2 sm:p-3 transition active:bg-opacity-70"
             aria-label="Next slide"
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={20} className="sm:w-6 sm:h-6" />
           </button>
 
           {/* Dot Indicators */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+          <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-2 px-2">
             {heroImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition ${
+                className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition ${
                   index === currentSlide
                     ? "bg-warm-gold"
                     : "bg-white bg-opacity-50 hover:bg-opacity-75"

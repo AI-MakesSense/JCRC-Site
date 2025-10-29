@@ -339,26 +339,37 @@ export default function Index() {
                 title: "Community Shabbat Dinner",
                 description:
                   "Join us for a warm community gathering celebrating Shabbat with dinner and song",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff960d0abd69341dc90f8510df6d116ef?format=webp&width=800",
               },
               {
                 title: "Interfaith Dialogue Series",
                 description:
                   "Building bridges through conversation with faith leaders across New Mexico",
+                image: null,
               },
               {
                 title: "Hanukkah Family Festival",
                 description:
                   "Celebrate the Festival of Lights with activities, crafts, and traditional foods",
+                image: null,
               },
             ].map((event, index) => (
               <div
                 key={index}
                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition"
               >
-                <div className="w-full h-48 bg-slate-200 flex items-center justify-center border-b-2 border-slate-300">
-                  <span className="text-slate-500 font-semibold text-sm">
-                    Image Placeholder
-                  </span>
+                <div className="w-full h-48 bg-slate-200 flex items-center justify-center border-b-2 border-slate-300 overflow-hidden">
+                  {event.image ? (
+                    <img
+                      src={event.image}
+                      alt={event.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-slate-500 font-semibold text-sm">
+                      Image Placeholder
+                    </span>
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-charcoal mb-2">

@@ -356,7 +356,7 @@ export default function Index() {
                 title: "Hanukkah Family Festival",
                 description:
                   "Celebrate the Festival of Lights with activities, crafts, and traditional foods",
-                image: null,
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3346074bda6f4553a8e462f0afd120d3?format=webp&width=800",
               },
             ].map((event, index) => (
               <div

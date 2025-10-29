@@ -437,11 +437,20 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+                title: "'Muted excitement': New Mexicans express relief, skepticism over Middle East peace deal",
+                description:
+                  "New Mexicans react with cautious optimism to the latest developments in Middle East peace negotiations.",
+                category: "News",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F119f8f3cba134fd38340087ba53ca2b2?format=webp&width=800",
+                link: "https://www.abqjournal.com/news/article_a5f46ab8-0876-4939-961e-895b22b8d2ec.html",
+              },
+              {
                 title: "UPDATE: With Joy and Relief, Our Living Hostages are Home",
                 description:
                   "The Jewish Community Relations Council celebrates the agreement to secure the release of the Israeli hostages cruelly held in Gaza.",
                 category: "Statement",
                 image: null,
+                link: null,
               },
               {
                 title: "We're hiring: Development and Operations Associate",
@@ -449,6 +458,7 @@ export default function Index() {
                   "Join our team and help us expand our reach and impact across the community.",
                 category: "Blog",
                 image: null,
+                link: null,
               },
               {
                 title: "JCRC Condemns Antisemitic Graffiti at Temple Israel",
@@ -456,6 +466,7 @@ export default function Index() {
                   "The Jewish Community Relations Council condemns antisemitic graffiti and stands in solidarity with our Jewish community members.",
                 category: "Statement",
                 image: null,
+                link: null,
               },
             ].map((article, index) => (
               <div

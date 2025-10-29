@@ -7,10 +7,10 @@ import {
   Newspaper,
   ChevronLeft,
   ChevronRight,
-  ChevronDown,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { NewsletterCTA } from "../components/NewsletterCTA";
+import { ScrollIndicator } from "../components/ScrollIndicator";
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

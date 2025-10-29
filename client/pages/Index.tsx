@@ -373,7 +373,7 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-deep-blue">
-              Join Us
+              Events
             </h2>
             <a
               href="#events"
@@ -383,7 +383,7 @@ export default function Index() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
                 title: "Community Shabbat Dinner",
@@ -409,7 +409,7 @@ export default function Index() {
             ].map((event, index) => (
               <div
                 key={index}
-                className={`relative h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
+                className={`relative h-80 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
                   index === 0
                     ? ""
                     : index === 1

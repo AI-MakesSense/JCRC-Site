@@ -193,7 +193,7 @@ export default function Index() {
               {
                 title: "COLLABORATE",
                 description: "Build bridges with broader community",
-                image: null
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F89f82441e1b84aaf9e93cc43512575ba?format=webp&width=600"
               },
               {
                 title: "ADVOCATE",

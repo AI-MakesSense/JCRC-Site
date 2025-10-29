@@ -359,9 +359,98 @@ export default function Index() {
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {Array(12).fill(null).map((_, index) => (
-              <div key={index} className="bg-slate-100 rounded-lg aspect-square flex items-center justify-center border border-slate-200 hover:border-warm-gold transition">
-                <span className="text-charcoal text-sm font-semibold text-center px-4">Supporter Logo</span>
+            {[
+              {
+                name: "Hadassah Northern NM",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fd9962d26844f4445b30ec7222e2ab453?format=webp&width=600"
+              },
+              {
+                name: "Hillel UNM",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F4fd71b04a7e2436389907c7f2cdc4aef?format=webp&width=600"
+              },
+              {
+                name: "Institute for Tolerance Studies",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F0c4d86355f4142798bd9952076186b6b?format=webp&width=600"
+              },
+              {
+                name: "JCC Albuquerque",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F5594b706ce1744b29cd9f8d2d79b8001?format=webp&width=600"
+              },
+              {
+                name: "Jewish Care Program",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F86e5aa755ec646eba54d6d6b91cf74b7?format=webp&width=600"
+              },
+              {
+                name: "Jewish Community Council Northern NM",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F1f302cbeae1340978cd694bcf1fafe5d?format=webp&width=600"
+              },
+              {
+                name: "Jewish Community Foundation NM",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F8b3a1049f9fa468887889cb123b782fc?format=webp&width=600"
+              },
+              {
+                name: "Jewish Learning Channel",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3e5a5a339cc344f9ad13fb6bd0b0daa5?format=webp&width=600"
+              },
+              {
+                name: "Limmud New Mexico",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fcd0fe6213b9a4de0b43e568744ac86b7?format=webp&width=600"
+              },
+              {
+                name: "Los Alamos Jewish Center",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff5aaf63306954aa8aeb1da49dfbeeda3?format=webp&width=600"
+              },
+              {
+                name: "Rabbinical Cantorial Association Albuquerque",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F9056f74b87754dda99d03e473c1a6753?format=webp&width=600"
+              },
+              {
+                name: "Santa Fe Distinguished Lecture Series",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fe2bde751e339435bab79d14880c656f3?format=webp&width=600"
+              },
+              {
+                name: "Santa Fe Jewish Center",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F9622ab8a35c6430487a30549f89d789d?format=webp&width=600"
+              },
+              {
+                name: "Santa Fe Jewish Film Festival",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fecfafb982b644c12991874863cccb013?format=webp&width=600"
+              },
+              {
+                name: "Santa Fe Middle East Watch",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fc164570859ef40c9919887dde0c06caa?format=webp&width=600"
+              },
+              {
+                name: "Shabbat with Friends",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F57485ff31fe9411482b5f988cd6b3fd5?format=webp&width=600"
+              },
+              {
+                name: "Temple Beth Shalom",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F913ca2cb12204a839418ec04fd8f885c?format=webp&width=600"
+              },
+              {
+                name: "ADL Mountain States",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff249e82ae1714a97bf241fd516550fd4?format=webp&width=600"
+              },
+              {
+                name: "Congregation Albert",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3ad718b75d80464991580ef70f6f2846?format=webp&width=600"
+              },
+              {
+                name: "Congregation Beit Tikva",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff6557c6ce0f74495b573cb9492fdbb59?format=webp&width=600"
+              },
+              {
+                name: "Congregation Bnai Israel",
+                logo: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fd265bf767f184b9d8d2564b3037db7cd?format=webp&width=600"
+              }
+            ].map((partner, index) => (
+              <div key={index} className="bg-white rounded-lg aspect-square flex items-center justify-center p-4 border border-slate-200 hover:border-warm-gold transition shadow-sm hover:shadow-md">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="w-full h-full object-contain"
+                />
               </div>
             ))}
           </div>

@@ -282,21 +282,21 @@ export default function Index() {
                   "Promote knowledge about Jewish culture and values",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F1c789e372105485290a02f2397ae27a0?format=webp&width=600",
-                accentColor: "#4A6F9B",
+                accentColor: "#23549B",
               },
               {
                 title: "COLLABORATE",
                 description: "Build bridges with broader community",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F89f82441e1b84aaf9e93cc43512575ba?format=webp&width=600",
-                accentColor: "#549748",
+                accentColor: "#23549B",
               },
               {
                 title: "ADVOCATE",
                 description: "Represent Jewish interests across NM",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F436bc5f83f654da8b3c5d4eaae6805d8?format=webp&width=600",
-                accentColor: "#D34E7A",
+                accentColor: "#23549B",
               },
             ].map((pillar, index) => {
               return (

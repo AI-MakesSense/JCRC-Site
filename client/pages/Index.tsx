@@ -439,23 +439,23 @@ export default function Index() {
               {
                 title: "UPDATE: With Joy and Relief, Our Living Hostages are Home",
                 description:
-                  "The Jewish Community Relations Council of Minnesota and the Dakotas enthusiastically celebrates the agreement to secure the release of the Israeli hostages cruelly held in Gaza.",
+                  "The Jewish Community Relations Council celebrates the agreement to secure the release of the Israeli hostages cruelly held in Gaza.",
                 category: "Statement",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F98c2ee7b61da41379a281d1ff5e23e39?format=webp&width=800",
+                image: null,
               },
               {
                 title: "We're hiring: Development and Operations Associate",
                 description:
-                  "Join our team as a Development and Operations Associate. Help us expand our reach and impact across the community.",
+                  "Join our team and help us expand our reach and impact across the community.",
                 category: "Blog",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff00530fc804840cca66900631c3a4557?format=webp&width=800",
+                image: null,
               },
               {
-                title: "JCRC Condemns Antisemitic Graffiti at Temple Israel on Anniversary of October 7 Attacks",
+                title: "JCRC Condemns Antisemitic Graffiti at Temple Israel",
                 description:
-                  "The Jewish Community Relations Council condemns the antisemitic graffiti found at Temple Israel. We stand in solidarity with our Jewish community members.",
+                  "The Jewish Community Relations Council condemns antisemitic graffiti and stands in solidarity with our Jewish community members.",
                 category: "Statement",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F82d3f3f4812c48f3baf2ef316368fa3f?format=webp&width=800",
+                image: null,
               },
             ].map((article, index) => (
               <div

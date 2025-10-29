@@ -277,6 +277,8 @@ export default function Index() {
                 description: "Connect and unite the Jewish community",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fe4497284033e4f1485999adddae9fe0f?format=webp&width=600",
+                icon: Users,
+                accentColor: "#23549B",
               },
               {
                 title: "EDUCATE",
@@ -284,42 +286,71 @@ export default function Index() {
                   "Promote knowledge about Jewish culture and values",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F1c789e372105485290a02f2397ae27a0?format=webp&width=600",
+                icon: BookOpen,
+                accentColor: "#4A6F9B",
               },
               {
                 title: "COLLABORATE",
                 description: "Build bridges with broader community",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F89f82441e1b84aaf9e93cc43512575ba?format=webp&width=600",
+                icon: Handshake,
+                accentColor: "#549748",
               },
               {
                 title: "ADVOCATE",
                 description: "Represent Jewish interests across NM",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F436bc5f83f654da8b3c5d4eaae6805d8?format=webp&width=600",
+                icon: Megaphone,
+                accentColor: "#D34E7A",
               },
-            ].map((pillar, index) => (
-              <div key={index} className="text-center">
-                <div className="w-full h-48 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border-2 border-slate-300">
-                  {pillar.image ? (
-                    <img
-                      src={pillar.image}
-                      alt={pillar.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-slate-500 font-semibold text-sm">
-                        Image Placeholder
-                      </span>
+            ].map((pillar, index) => {
+              const IconComponent = pillar.icon;
+              return (
+                <div
+                  key={index}
+                  className="text-center bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 group"
+                >
+                  <div
+                    className="h-2 w-full transition-all duration-300"
+                    style={{ backgroundColor: pillar.accentColor }}
+                  ></div>
+                  <div className="p-6">
+                    <div className="flex justify-center mb-4">
+                      <div
+                        className="p-3 rounded-full group-hover:scale-110 transition-transform duration-300"
+                        style={{ backgroundColor: `${pillar.accentColor}15` }}
+                      >
+                        <IconComponent
+                          size={32}
+                          style={{ color: pillar.accentColor }}
+                        />
+                      </div>
                     </div>
-                  )}
+                    <div className="w-full h-40 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border border-slate-300">
+                      {pillar.image ? (
+                        <img
+                          src={pillar.image}
+                          alt={pillar.title}
+                          className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center">
+                          <span className="text-slate-500 font-semibold text-sm">
+                            Image Placeholder
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <h3 className="text-lg font-bold text-charcoal mb-2 transition-colors duration-300 group-hover:text-warm-gold">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-charcoal text-sm">{pillar.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-charcoal mb-2">
-                  {pillar.title}
-                </h3>
-                <p className="text-charcoal text-sm">{pillar.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <ScrollIndicator />

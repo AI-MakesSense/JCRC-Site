@@ -424,6 +424,93 @@ export default function Index() {
         </div>
       </section>
 
+      {/* News/Blog Section */}
+      <section id="news" className="relative py-20 sm:py-32 bg-gradient-to-b from-white via-blue-50 to-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center text-deep-blue mb-4">
+            News & Blog
+          </h2>
+          <p className="text-center text-charcoal mb-16 max-w-2xl mx-auto text-lg">
+            Stay updated with the latest stories and announcements from our community
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "UPDATE: With Joy and Relief, Our Living Hostages are Home",
+                description:
+                  "The Jewish Community Relations Council of Minnesota and the Dakotas enthusiastically celebrates the agreement to secure the release of the Israeli hostages cruelly held in Gaza.",
+                category: "Statement",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F98c2ee7b61da41379a281d1ff5e23e39?format=webp&width=800",
+              },
+              {
+                title: "We're hiring: Development and Operations Associate",
+                description:
+                  "Join our team as a Development and Operations Associate. Help us expand our reach and impact across the community.",
+                category: "Blog",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff00530fc804840cca66900631c3a4557?format=webp&width=800",
+              },
+              {
+                title: "JCRC Condemns Antisemitic Graffiti at Temple Israel on Anniversary of October 7 Attacks",
+                description:
+                  "The Jewish Community Relations Council condemns the antisemitic graffiti found at Temple Israel. We stand in solidarity with our Jewish community members.",
+                category: "Statement",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F82d3f3f4812c48f3baf2ef316368fa3f?format=webp&width=800",
+              },
+            ].map((article, index) => (
+              <div
+                key={index}
+                className="relative h-72 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
+              >
+                {article.image ? (
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:brightness-50 transition-all duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-slate-300 flex items-center justify-center">
+                    <span className="text-slate-500 font-semibold">
+                      Image Placeholder
+                    </span>
+                  </div>
+                )}
+
+                {/* Initial overlay with title and category */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-between p-6 group-hover:opacity-0 transition-opacity duration-300">
+                  <div className="flex justify-end">
+                    <span className="px-3 py-1 bg-warm-gold text-deep-blue text-xs font-bold rounded">
+                      {article.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white leading-tight">
+                    {article.title}
+                  </h3>
+                </div>
+
+                {/* Hover overlay with details */}
+                <div className="absolute inset-0 bg-deep-blue/80 p-6 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-3 py-1 bg-warm-gold text-deep-blue text-xs font-bold rounded mb-4">
+                    {article.category}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                    {article.title}
+                  </h3>
+                  <p className="text-white/90 text-sm mb-6 leading-relaxed">
+                    {article.description}
+                  </p>
+                  <button className="px-6 py-2 bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300">
+                    Read More →
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <ScrollIndicator />
+        </div>
+      </section>
+
       {/* Resources Section */}
       <section id="resources" className="relative py-20 sm:py-32 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

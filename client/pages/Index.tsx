@@ -489,17 +489,17 @@ export default function Index() {
                 </div>
 
                 {/* Hover overlay with details */}
-                <div className="absolute inset-0 bg-deep-blue/80 p-6 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="px-3 py-1 bg-warm-gold text-deep-blue text-xs font-bold rounded mb-4">
+                <div className="absolute inset-0 bg-deep-blue/80 p-5 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="px-2 py-1 bg-warm-gold text-deep-blue text-xs font-bold rounded mb-3">
                     {article.category}
                   </span>
-                  <h3 className="text-xl font-bold text-white mb-3 leading-tight">
+                  <h3 className="text-lg font-bold text-white mb-2 leading-tight line-clamp-2">
                     {article.title}
                   </h3>
-                  <p className="text-white/90 text-sm mb-6 leading-relaxed">
+                  <p className="text-white/90 text-xs mb-4 leading-relaxed line-clamp-3">
                     {article.description}
                   </p>
-                  <button className="px-6 py-2 bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300">
+                  <button className="px-5 py-2 text-sm bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300 whitespace-nowrap">
                     Read More →
                   </button>
                 </div>

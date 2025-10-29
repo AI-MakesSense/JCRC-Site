@@ -669,7 +669,9 @@ export default function Index() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-warm-gold"
+                className={`bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-warm-gold animate-fade-in-up ${
+                  index === 0 ? "" : index === 1 ? "animate-delay-100" : "animate-delay-200"
+                }`}
               >
                 <div className="flex items-center justify-center mb-4">
                   {[...Array(5)].map((_, i) => (

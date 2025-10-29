@@ -202,7 +202,10 @@ export default function Index() {
           {/* Content Overlay */}
           <div className="absolute inset-0 flex items-center justify-center text-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg" style={{ lineHeight: "65px" }}>
+              <h1
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg"
+                style={{ lineHeight: "65px" }}
+              >
                 Building a Vibrant, Secure Jewish Community in New Mexico
               </h1>
               <p className="text-lg sm:text-xl mb-8 text-blue-100 max-w-2xl mx-auto drop-shadow-md">
@@ -321,7 +324,10 @@ export default function Index() {
                     style={{ backgroundColor: pillar.accentColor }}
                   ></div>
                   <div className="p-6">
-                    <div className="w-full h-40 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border-2 transition-all duration-300" style={{ borderColor: `${pillar.accentColor}40` }}>
+                    <div
+                      className="w-full h-40 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border-2 transition-all duration-300"
+                      style={{ borderColor: `${pillar.accentColor}40` }}
+                    >
                       {pillar.image ? (
                         <img
                           src={pillar.image}
@@ -339,12 +345,18 @@ export default function Index() {
                     <h3
                       className="text-lg font-bold mb-2 transition-colors duration-300 group-hover:text-white py-1 px-3 rounded-md"
                       style={{ color: pillar.accentColor }}
-                      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = `${pillar.accentColor}15`)}
-                      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+                      onMouseEnter={(e) =>
+                        (e.currentTarget.style.backgroundColor = `${pillar.accentColor}15`)
+                      }
+                      onMouseLeave={(e) =>
+                        (e.currentTarget.style.backgroundColor = "transparent")
+                      }
                     >
                       {pillar.title}
                     </h3>
-                    <p className="text-charcoal text-sm">{pillar.description}</p>
+                    <p className="text-charcoal text-sm">
+                      {pillar.description}
+                    </p>
                   </div>
                 </div>
               );
@@ -380,25 +392,32 @@ export default function Index() {
                 title: "Community Shabbat Dinner",
                 description:
                   "Join us for a warm community gathering celebrating Shabbat with dinner and song",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff960d0abd69341dc90f8510df6d116ef?format=webp&width=800",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff960d0abd69341dc90f8510df6d116ef?format=webp&width=800",
               },
               {
                 title: "Interfaith Dialogue Series",
                 description:
                   "Building bridges through conversation with faith leaders across New Mexico",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F327cb3853f5e4dbaa5f99763cafaf3ed?format=webp&width=800",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F327cb3853f5e4dbaa5f99763cafaf3ed?format=webp&width=800",
               },
               {
                 title: "Hanukkah Family Festival",
                 description:
                   "Celebrate the Festival of Lights with activities, crafts, and traditional foods",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3346074bda6f4553a8e462f0afd120d3?format=webp&width=800",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F3346074bda6f4553a8e462f0afd120d3?format=webp&width=800",
               },
             ].map((event, index) => (
               <div
                 key={index}
                 className={`relative h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
-                  index === 0 ? "" : index === 1 ? "animate-delay-100" : "animate-delay-200"
+                  index === 0
+                    ? ""
+                    : index === 1
+                      ? "animate-delay-100"
+                      : "animate-delay-200"
                 }`}
               >
                 {event.image ? (
@@ -453,40 +472,51 @@ export default function Index() {
             News & Blog
           </h2>
           <p className="text-center text-charcoal mb-16 max-w-2xl mx-auto text-lg">
-            Stay updated with the latest stories and announcements from our community
+            Stay updated with the latest stories and announcements from our
+            community
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "'Muted excitement': New Mexicans express relief, skepticism over Middle East peace deal",
+                title:
+                  "'Muted excitement': New Mexicans express relief, skepticism over Middle East peace deal",
                 description:
                   "New Mexicans react with cautious optimism to the latest developments in Middle East peace negotiations.",
                 category: "News",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F119f8f3cba134fd38340087ba53ca2b2?format=webp&width=800",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F119f8f3cba134fd38340087ba53ca2b2?format=webp&width=800",
                 link: "https://www.abqjournal.com/news/article_a5f46ab8-0876-4939-961e-895b22b8d2ec.html",
               },
               {
-                title: "UPDATE: With Joy and Relief, Our Living Hostages are Home",
+                title:
+                  "UPDATE: With Joy and Relief, Our Living Hostages are Home",
                 description:
                   "The Jewish Community Relations Council celebrates the agreement to secure the release of the Israeli hostages cruelly held in Gaza.",
                 category: "Statement",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff1362f7b6b294acf9ae85aaf995489df?format=webp&width=800",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff1362f7b6b294acf9ae85aaf995489df?format=webp&width=800",
                 link: null,
               },
               {
-                title: "Sorrow, joy mix during remembrance event for victims of Oct. 7 attacks at Santa Fe Jewish Center",
+                title:
+                  "Sorrow, joy mix during remembrance event for victims of Oct. 7 attacks at Santa Fe Jewish Center",
                 description:
                   "The Santa Fe Jewish community gathers to remember and honor the victims of the October 7 attacks.",
                 category: "News",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F6be0c5bd14c240538e70af8526435caa?format=webp&width=800",
+                image:
+                  "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F6be0c5bd14c240538e70af8526435caa?format=webp&width=800",
                 link: "https://www.santafenewmexican.com/news/local_news/sorrow-joy-mix-during-remembrance-event-for-victims-of-oct-7-attacks-at-santa-fe/article_27aafd1a-033c-488a-9659-3ddcc362c81b.html",
               },
             ].map((article, index) => (
               <div
                 key={index}
                 className={`relative h-72 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer animate-fade-in-up ${
-                  index === 0 ? "" : index === 1 ? "animate-delay-100" : "animate-delay-200"
+                  index === 0
+                    ? ""
+                    : index === 1
+                      ? "animate-delay-100"
+                      : "animate-delay-200"
                 }`}
               >
                 {article.image ? (
@@ -655,13 +685,17 @@ export default function Index() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative py-20 sm:py-32 bg-white" aria-label="Testimonials from community members">
+      <section
+        className="relative py-20 sm:py-32 bg-white"
+        aria-label="Testimonials from community members"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-deep-blue mb-4">
             What Our Community Says
           </h2>
           <p className="text-center text-charcoal mb-16 max-w-2xl mx-auto text-lg">
-            Hear from community members and partners about the impact of our work
+            Hear from community members and partners about the impact of our
+            work
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -688,12 +722,23 @@ export default function Index() {
               <div
                 key={index}
                 className={`bg-slate-50 p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-warm-gold animate-fade-in-up ${
-                  index === 0 ? "" : index === 1 ? "animate-delay-100" : "animate-delay-200"
+                  index === 0
+                    ? ""
+                    : index === 1
+                      ? "animate-delay-100"
+                      : "animate-delay-200"
                 }`}
               >
-                <div className="flex items-center justify-center mb-4" aria-label="5 out of 5 stars">
+                <div
+                  className="flex items-center justify-center mb-4"
+                  aria-label="5 out of 5 stars"
+                >
                   {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-warm-gold text-lg" aria-hidden="true">
+                    <span
+                      key={i}
+                      className="text-warm-gold text-lg"
+                      aria-hidden="true"
+                    >
                       ★
                     </span>
                   ))}

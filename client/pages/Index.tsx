@@ -355,7 +355,7 @@ export default function Index() {
             Making a Difference Together
           </h2>
           <p className="text-center text-charcoal mb-16 max-w-2xl mx-auto text-lg">
-            Thank You to Our Supporters
+            Thank You to Our Community Partners
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">

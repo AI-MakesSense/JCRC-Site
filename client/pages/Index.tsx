@@ -222,13 +222,16 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Community Shabbat Dinner"
+                title: "Community Shabbat Dinner",
+                description: "Join us for a warm community gathering celebrating Shabbat with dinner and song"
               },
               {
-                title: "Interfaith Dialogue Series"
+                title: "Interfaith Dialogue Series",
+                description: "Building bridges through conversation with faith leaders across New Mexico"
               },
               {
-                title: "Hanukkah Family Festival"
+                title: "Hanukkah Family Festival",
+                description: "Celebrate the Festival of Lights with activities, crafts, and traditional foods"
               }
             ].map((event, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
@@ -236,7 +239,8 @@ export default function Index() {
                   <span className="text-slate-500 font-semibold text-sm">Image Placeholder</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-charcoal mb-4">{event.title}</h3>
+                  <h3 className="text-lg font-bold text-charcoal mb-2">{event.title}</h3>
+                  <p className="text-charcoal text-sm mb-4">{event.description}</p>
                   <button className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm">
                     Register →
                   </button>

@@ -439,7 +439,11 @@ export default function Index() {
       </section>
 
       {/* News/Blog Section */}
-      <section id="news" className="relative py-20 sm:py-32 bg-gradient-to-b from-white via-blue-50 to-white">
+      <section
+        id="news"
+        className="relative py-20 sm:py-32 bg-gradient-to-b from-white via-blue-50 to-white"
+        aria-label="Latest news and blog articles"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-deep-blue mb-4">
             News & Blog

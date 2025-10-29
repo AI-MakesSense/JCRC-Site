@@ -551,7 +551,11 @@ export default function Index() {
       <div className="h-1 bg-gradient-to-r from-transparent via-warm-gold to-transparent"></div>
 
       {/* Resources Section */}
-      <section id="resources" className="relative py-20 sm:py-32 bg-white">
+      <section
+        id="resources"
+        className="relative py-20 sm:py-32 bg-white"
+        aria-label="Gateway to Jewish life resources in New Mexico"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-deep-blue mb-4">
             Your Gateway to Jewish Life in New Mexico

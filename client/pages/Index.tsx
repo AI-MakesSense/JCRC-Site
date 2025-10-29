@@ -302,7 +302,15 @@ export default function Index() {
               return (
                 <div
                   key={index}
-                  className="text-center rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-105 group bg-gradient-to-br from-white to-slate-50 border border-slate-100"
+                  className={`text-center rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-105 group bg-gradient-to-br from-white to-slate-50 border border-slate-100 animate-fade-in-up ${
+                    index === 0
+                      ? ""
+                      : index === 1
+                        ? "animate-delay-100"
+                        : index === 2
+                          ? "animate-delay-200"
+                          : "animate-delay-300"
+                  }`}
                 >
                   <div
                     className="h-3 w-full transition-all duration-300 group-hover:h-4"

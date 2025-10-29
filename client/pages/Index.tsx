@@ -345,7 +345,7 @@ export default function Index() {
                 title: "Interfaith Dialogue Series",
                 description:
                   "Building bridges through conversation with faith leaders across New Mexico",
-                image: null,
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F327cb3853f5e4dbaa5f99763cafaf3ed?format=webp&width=800",
               },
               {
                 title: "Hanukkah Family Festival",

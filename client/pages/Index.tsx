@@ -381,30 +381,39 @@ export default function Index() {
             ].map((event, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition"
+                className="relative h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
               >
-                <div className="w-full h-48 bg-slate-200 flex items-center justify-center border-b-2 border-slate-300 overflow-hidden">
-                  {event.image ? (
-                    <img
-                      src={event.image}
-                      alt={event.title}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <span className="text-slate-500 font-semibold text-sm">
+                {event.image ? (
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover group-hover:brightness-50 transition-all duration-300"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-slate-300 flex items-center justify-center">
+                    <span className="text-slate-500 font-semibold">
                       Image Placeholder
                     </span>
-                  )}
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-charcoal mb-2">
+                  </div>
+                )}
+
+                {/* Initial overlay with title */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6 group-hover:opacity-0 transition-opacity duration-300">
+                  <h3 className="text-2xl font-bold text-white">
                     {event.title}
                   </h3>
-                  <p className="text-charcoal text-sm mb-4">
+                </div>
+
+                {/* Hover overlay with details */}
+                <div className="absolute inset-0 bg-deep-blue/95 p-6 flex flex-col justify-center items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    {event.title}
+                  </h3>
+                  <p className="text-white/90 text-sm mb-6 leading-relaxed">
                     {event.description}
                   </p>
-                  <button className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm">
-                    Register →
+                  <button className="px-6 py-2 bg-warm-gold text-deep-blue font-bold rounded hover:bg-warm-gold/90 transition-all duration-300">
+                    Learn More →
                   </button>
                 </div>
               </div>

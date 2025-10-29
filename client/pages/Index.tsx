@@ -251,6 +251,13 @@ export default function Index() {
               />
             ))}
           </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+            <div className="flex flex-col items-center gap-2 animate-bounce">
+              <ChevronDown size={28} className="text-warm-gold" strokeWidth={3} />
+            </div>
+          </div>
         </div>
       </section>
 

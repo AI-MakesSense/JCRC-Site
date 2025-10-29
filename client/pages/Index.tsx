@@ -460,14 +460,6 @@ export default function Index() {
                 image: null,
                 link: null,
               },
-              {
-                title: "JCRC Condemns Antisemitic Graffiti at Temple Israel",
-                description:
-                  "The Jewish Community Relations Council condemns antisemitic graffiti and stands in solidarity with our Jewish community members.",
-                category: "Statement",
-                image: null,
-                link: null,
-              },
             ].map((article, index) => (
               <div
                 key={index}

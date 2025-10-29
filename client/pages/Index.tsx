@@ -65,7 +65,7 @@ export default function Index() {
               <a href="#resources" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">RESOURCES</a>
               <a href="#news" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">NEWS</a>
               <a href="#involved" className="text-charcoal hover:text-deep-blue transition font-medium text-sm">GET INVOLVED</a>
-              <button className="px-6 py-2 bg-warm-gold text-charcoal rounded-md hover:opacity-90 transition font-bold text-sm">
+              <button className="px-6 py-2 bg-deep-blue text-white rounded-md hover:opacity-90 transition font-bold text-sm">
                 DONATE
               </button>
             </nav>

@@ -895,21 +895,34 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-bold text-warm-gold mb-4">Connect</h4>
+              <h4 className="font-bold text-warm-gold mb-4">Connect With Us</h4>
               <div className="flex gap-4">
-                <a href="#facebook" className="hover:text-warm-gold transition">
+                <a
+                  href="#facebook"
+                  aria-label="Follow JCRC-NM on Facebook"
+                  className="hover:text-warm-gold transition font-bold"
+                >
                   f
                 </a>
-                <a href="#twitter" className="hover:text-warm-gold transition">
+                <a
+                  href="#twitter"
+                  aria-label="Follow JCRC-NM on Twitter/X"
+                  className="hover:text-warm-gold transition"
+                >
                   𝕏
                 </a>
                 <a
                   href="#instagram"
+                  aria-label="Follow JCRC-NM on Instagram"
                   className="hover:text-warm-gold transition"
                 >
                   📷
                 </a>
-                <a href="#linkedin" className="hover:text-warm-gold transition">
+                <a
+                  href="#linkedin"
+                  aria-label="Connect with JCRC-NM on LinkedIn"
+                  className="hover:text-warm-gold transition font-bold"
+                >
                   in
                 </a>
               </div>

@@ -453,12 +453,12 @@ export default function Index() {
                 link: null,
               },
               {
-                title: "We're hiring: Development and Operations Associate",
+                title: "Sorrow, joy mix during remembrance event for victims of Oct. 7 attacks at Santa Fe Jewish Center",
                 description:
-                  "Join our team and help us expand our reach and impact across the community.",
-                category: "Blog",
-                image: null,
-                link: null,
+                  "The Santa Fe Jewish community gathers to remember and honor the victims of the October 7 attacks.",
+                category: "News",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F6be0c5bd14c240538e70af8526435caa?format=webp&width=800",
+                link: "https://www.santafenewmexican.com/news/local_news/sorrow-joy-mix-during-remembrance-event-for-victims-of-oct-7-attacks-at-santa-fe/article_27aafd1a-033c-488a-9659-3ddcc362c81b.html",
               },
             ].map((article, index) => (
               <div

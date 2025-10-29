@@ -182,24 +182,38 @@ export default function Index() {
             {[
               {
                 title: "ENGAGE",
-                description: "Connect and unite the Jewish community"
+                description: "Connect and unite the Jewish community",
+                image: null
               },
               {
                 title: "EDUCATE",
-                description: "Promote knowledge about Jewish culture and values"
+                description: "Promote knowledge about Jewish culture and values",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F1c789e372105485290a02f2397ae27a0?format=webp&width=600"
               },
               {
                 title: "COLLABORATE",
-                description: "Build bridges with broader community"
+                description: "Build bridges with broader community",
+                image: null
               },
               {
                 title: "ADVOCATE",
-                description: "Represent Jewish interests across NM"
+                description: "Represent Jewish interests across NM",
+                image: null
               }
             ].map((pillar, index) => (
               <div key={index} className="text-center">
-                <div className="w-full h-48 mx-auto mb-4 bg-slate-200 rounded-lg flex items-center justify-center border-2 border-slate-300">
-                  <span className="text-slate-500 font-semibold text-sm">Image Placeholder</span>
+                <div className="w-full h-48 mx-auto mb-4 bg-slate-200 rounded-lg overflow-hidden border-2 border-slate-300">
+                  {pillar.image ? (
+                    <img
+                      src={pillar.image}
+                      alt={pillar.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-slate-500 font-semibold text-sm">Image Placeholder</span>
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-charcoal mb-2">{pillar.title}</h3>
                 <p className="text-charcoal text-sm">{pillar.description}</p>

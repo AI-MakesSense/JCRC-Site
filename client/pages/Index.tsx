@@ -7,9 +7,6 @@ import {
   Newspaper,
   ChevronLeft,
   ChevronRight,
-  Users,
-  Handshake,
-  Megaphone,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { NewsletterCTA } from "../components/NewsletterCTA";

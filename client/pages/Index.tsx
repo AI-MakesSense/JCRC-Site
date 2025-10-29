@@ -274,7 +274,6 @@ export default function Index() {
                 description: "Connect and unite the Jewish community",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Fe4497284033e4f1485999adddae9fe0f?format=webp&width=600",
-                icon: Users,
                 accentColor: "#23549B",
               },
               {
@@ -283,7 +282,6 @@ export default function Index() {
                   "Promote knowledge about Jewish culture and values",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F1c789e372105485290a02f2397ae27a0?format=webp&width=600",
-                icon: BookOpen,
                 accentColor: "#4A6F9B",
               },
               {
@@ -291,7 +289,6 @@ export default function Index() {
                 description: "Build bridges with broader community",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F89f82441e1b84aaf9e93cc43512575ba?format=webp&width=600",
-                icon: Handshake,
                 accentColor: "#549748",
               },
               {
@@ -299,7 +296,6 @@ export default function Index() {
                 description: "Represent Jewish interests across NM",
                 image:
                   "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2F436bc5f83f654da8b3c5d4eaae6805d8?format=webp&width=600",
-                icon: Megaphone,
                 accentColor: "#D34E7A",
               },
             ].map((pillar, index) => {

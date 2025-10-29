@@ -356,7 +356,11 @@ export default function Index() {
       </section>
 
       {/* Events Section */}
-      <section id="events" className="relative py-20 sm:py-32 bg-slate-50">
+      <section
+        id="events"
+        className="relative py-20 sm:py-32 bg-slate-50"
+        aria-label="Upcoming community events"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-deep-blue">

@@ -449,7 +449,7 @@ export default function Index() {
                 description:
                   "The Jewish Community Relations Council celebrates the agreement to secure the release of the Israeli hostages cruelly held in Gaza.",
                 category: "Statement",
-                image: null,
+                image: "https://cdn.builder.io/api/v1/image/assets%2F62a90350fdb94377abbbea42bb06ae7b%2Ff1362f7b6b294acf9ae85aaf995489df?format=webp&width=800",
                 link: null,
               },
               {

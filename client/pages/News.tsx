@@ -358,7 +358,7 @@ export default function News() {
                 {paginatedArticles.map((article, index) => (
                   <div
                     key={article.id}
-                    className={`relative h-96 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group cursor-pointer flex flex-col bg-white border border-slate-200 hover:border-warm-gold animate-fade-in-up ${
+                    className={`relative rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer flex flex-col bg-white border border-slate-200 hover:border-warm-gold animate-fade-in-up ${
                       index === 0
                         ? ""
                         : index === 1
@@ -372,31 +372,31 @@ export default function News() {
                       <img
                         src={article.image}
                         alt={article.title}
-                        className="w-full h-48 object-cover group-hover:brightness-90 transition-all duration-300"
+                        className="w-full h-40 object-cover group-hover:brightness-90 transition-all duration-300"
                       />
                     )}
 
-                    <div className="flex-1 flex flex-col p-5">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="px-2.5 py-1 bg-warm-gold text-deep-blue text-xs font-bold rounded">
+                    <div className="flex-1 flex flex-col p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="px-3 py-1.5 bg-warm-gold text-deep-blue text-xs font-bold rounded">
                           {article.category}
                         </span>
-                        <span className="text-slate-500 text-xs flex items-center gap-1">
+                        <span className="text-slate-500 text-xs flex items-center gap-1 whitespace-nowrap">
                           <Calendar size={14} />
                           {formatDate(article.date)}
                         </span>
                       </div>
 
-                      <h3 className="text-lg font-bold text-deep-blue mb-2 leading-snug line-clamp-2 group-hover:text-warm-gold transition">
+                      <h3 className="text-base font-bold text-deep-blue mb-3 leading-tight line-clamp-3 group-hover:text-warm-gold transition">
                         {article.title}
                       </h3>
 
-                      <p className="text-charcoal text-sm mb-3 line-clamp-2 flex-1">
+                      <p className="text-charcoal text-sm mb-4 line-clamp-2 flex-1 leading-relaxed">
                         {article.description}
                       </p>
 
-                      <div className="flex items-center justify-between pt-3 border-t border-slate-200">
-                        <span className="text-slate-500 text-xs">
+                      <div className="space-y-3 pt-4 border-t border-slate-200">
+                        <span className="text-slate-500 text-xs block">
                           {article.author}
                         </span>
                         {article.link ? (
@@ -404,13 +404,13 @@ export default function News() {
                             href={article.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm flex items-center gap-1"
+                            className="inline-flex items-center gap-2 px-4 py-2 bg-deep-blue text-white font-bold text-sm rounded hover:bg-deep-blue/90 transition whitespace-nowrap"
                           >
-                            Read <ArrowRight size={16} />
+                            Read Article <ArrowRight size={18} />
                           </a>
                         ) : (
-                          <button className="text-deep-blue hover:text-warm-gold transition font-semibold text-sm flex items-center gap-1">
-                            Read <ArrowRight size={16} />
+                          <button className="inline-flex items-center gap-2 px-4 py-2 bg-deep-blue text-white font-bold text-sm rounded hover:bg-deep-blue/90 transition whitespace-nowrap">
+                            Read Article <ArrowRight size={18} />
                           </button>
                         )}
                       </div>

@@ -29,14 +29,12 @@ const App = () => (
   </QueryClientProvider>
 );
 
+let root: any = null;
 const rootElement = document.getElementById("root");
-if (rootElement && !rootElement.hasChildNodes()) {
-  createRoot(rootElement).render(<App />);
-} else if (rootElement?.hasChildNodes()) {
-  const root = (rootElement as any)._reactRootContainer || (rootElement as any)._reactRender;
-  if (root) {
-    root.render(<App />);
-  } else {
-    createRoot(rootElement).render(<App />);
+
+if (rootElement) {
+  if (!root) {
+    root = createRoot(rootElement);
   }
+  root.render(<App />);
 }

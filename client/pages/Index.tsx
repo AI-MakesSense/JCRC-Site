@@ -101,7 +101,7 @@ export default function Index() {
                 RESOURCES
               </a>
               <a
-                href="#news"
+                href="/news"
                 className="text-charcoal hover:text-deep-blue transition font-medium text-sm"
               >
                 NEWS
